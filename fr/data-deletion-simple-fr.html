@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supprimer le Compte et les Données – Pocket Games Lab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .intro {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+
+        .intro p {
+            margin: 0;
+            font-size: 1.05em;
+            color: #856404;
+        }
+
+        h2 {
+            color: #e74c3c;
+            font-size: 1.6em;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f5f7fa;
+        }
+
+        .steps {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 12px;
+            background: white;
+            border-radius: 6px;
+            transition: transform 0.2s ease;
+        }
+
+        .step:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1em;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+
+        .step-text {
+            padding-top: 4px;
+            font-size: 1.05em;
+        }
+
+        .data-list {
+            margin: 20px 0;
+        }
+
+        .data-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .data-list li {
+            padding: 12px 15px;
+            margin: 8px 0;
+            background: #f8f9fa;
+            border-left: 4px solid #e74c3c;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+
+        .data-list li::before {
+            content: "✓";
+            color: #e74c3c;
+            font-weight: 700;
+            font-size: 1.3em;
+            margin-right: 12px;
+        }
+
+        .retention-section {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .retention-section li {
+            border-left-color: #4caf50;
+        }
+
+        .retention-section li::before {
+            color: #4caf50;
+        }
+
+        .warning-box {
+            background: #ffebee;
+            border: 2px solid #e74c3c;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .warning-box p {
+            margin: 0;
+            font-weight: 600;
+            color: #c0392b;
+            font-size: 1.1em;
+        }
+
+        .contact {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 20px;
+            margin: 30px 0 0 0;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 0 0 12px 0;
+            color: #1565c0;
+            font-weight: 600;
+        }
+
+        .contact a {
+            color: #2196f3;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #c0392b;
+            text-decoration: underline;
+        }
+
+        .footer-info {
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 1.6em;
+            }
+
+            .content {
+                padding: 25px 20px;
+            }
+
+            .step {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .step-number {
+                margin-bottom: 10px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗑️ Supprimer le Compte et les Données</h1>
+            <p>Pocket Games Lab</p>
+        </div>
+
+        <div class="content">
+            <div class="intro">
+                <p>Les utilisateurs peuvent demander la suppression de leur compte et des données associées directement depuis l'application.</p>
+            </div>
+
+            <h2>Comment supprimer votre compte</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Ouvrir l'application</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Aller dans Profil</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Ouvrir la section Compte</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-text">Appuyer sur Supprimer le compte</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-text">Confirmer la suppression</div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <p>⚠️ Le compte et les données associées seront supprimés immédiatement.</p>
+            </div>
+
+            <h2>Données qui sont supprimées</h2>
+            
+            <div class="data-list">
+                <p style="margin-bottom: 15px;">Lorsque vous supprimez votre compte, les données suivantes sont définitivement effacées :</p>
+                <ul>
+                    <li>Compte utilisateur (UID Firebase Authentication)</li>
+                    <li>Adresse email (si liée)</li>
+                    <li>Progression de jeu et statistiques</li>
+                    <li>Succès et déblocages</li>
+                    <li>Solde de monnaie virtuelle (gemmes)</li>
+                    <li>Données de profil personnalisées (avatar, nom, personnalisation)</li>
+                </ul>
+            </div>
+
+            <h2>Données qui peuvent être conservées</h2>
+            
+            <div class="retention-section">
+                <ul>
+                    <li>Historique d'achat requis pour la conformité légale ou financière (géré par Google Play)</li>
+                    <li>Données analytiques agrégées anonymes (non identifiables)</li>
+                </ul>
+            </div>
+
+            <h2>Période de rétention</h2>
+            
+            <div class="data-list">
+                <ul>
+                    <li><strong>Données liées au compte :</strong> supprimées immédiatement</li>
+                    <li><strong>Données financières :</strong> conservées selon les politiques de Google Play</li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <p>Pour toute question, contactez :</p>
+                <a href="mailto:votre-email@example.com">votre-email@example.com</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-links">
+                <a href="privacy-policy-fr.html">Politique de Confidentialité</a>
+                <a href="terms-of-service-fr.html">Conditions d'Utilisation</a>
+                <a href="index.html">← Retour aux Documents Légaux</a>
+            </div>
+            <div class="footer-info">
+                <p>Pocket Games Lab – Collection de Jeux Mobile Indie</p>
+                <p>Dernière mise à jour : Décembre 2025</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
