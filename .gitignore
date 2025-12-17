@@ -1,0 +1,23 @@
+# Backups créés par le script de personnalisation
+*.backup
+*.bak
+*.tmp
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Éditeurs
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Fichiers temporaires
+temp/
+tmp/
