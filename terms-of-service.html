@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service – PocketGamesLab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #16a085 0%, #138d75 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .intro {
+            background: #d5f4e6;
+            border-left: 4px solid #16a085;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+
+        .intro p {
+            margin: 8px 0;
+            color: #0e6655;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        h2 {
+            color: #138d75;
+            font-size: 1.6em;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f5f7fa;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .data-list {
+            margin: 20px 0;
+        }
+
+        .data-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .data-list li {
+            padding: 12px 15px;
+            margin: 8px 0;
+            background: #f8f9fa;
+            border-left: 4px solid #16a085;
+            border-radius: 4px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .data-list li::before {
+            content: "•";
+            color: #16a085;
+            font-weight: 700;
+            font-size: 1.5em;
+            margin-right: 12px;
+            line-height: 1.2;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: #856404;
+            font-weight: 600;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .info-box p {
+            margin: 0 0 10px 0;
+            color: #1565c0;
+        }
+
+        .contact {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 25px;
+            margin: 30px 0 0 0;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 0 0 12px 0;
+            color: #1565c0;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .contact a {
+            color: #2196f3;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #bbdefb;
+        }
+
+        .contact-info p {
+            font-size: 1em;
+            font-weight: normal;
+            margin: 5px 0;
+        }
+
+        p {
+            margin: 12px 0;
+            line-height: 1.7;
+        }
+
+        strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        a {
+            color: #16a085;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #138d75;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #0e6655;
+            text-decoration: underline;
+        }
+
+        .footer-info {
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 1.6em;
+            }
+
+            .content {
+                padding: 25px 20px;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📜 Terms of Service</h1>
+            <p>PocketGamesLab</p>
+        </div>
+
+        <div class="content">
+            <div class="last-updated">
+                Last updated: December 20, 2025
+            </div>
+
+            <div class="intro">
+                <p>These Terms of Service ("Terms") govern your access to and use of PocketGamesLab ("the App"), developed by Sedigi Tamime.</p>
+                <p><strong>By downloading or using the App, you agree to these Terms.</strong></p>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="section">
+                <h2>1. Description of the Service</h2>
+                <p>The App is a mobile game hub offering multiple games across various genres, including but not limited to puzzle, arcade, and casual games.</p>
+                <p>The App may evolve over time with new game modes, genres, features, and content.</p>
+                <p>Some content may be unlocked temporarily through rewarded advertisements or permanently through virtual currency or in-app purchases.</p>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="section">
+                <h2>2. User Accounts</h2>
+                <div class="data-list">
+                    <ul>
+                        <li>The App uses automatic anonymous authentication</li>
+                        <li>Users may optionally link an account using an email and password</li>
+                        <li>Users are responsible for maintaining the security of their account</li>
+                    </ul>
+                </div>
+                
+                <div class="warning-box">
+                    <p>⚠️ The developer is not responsible for any loss of data caused by:</p>
+                </div>
+                <div class="data-list">
+                    <ul>
+                        <li>Account deletion</li>
+                        <li>Logging out from an anonymous account (all data will be permanently lost)</li>
+                        <li>Device change without account linking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="section">
+                <h2>3. In-App Purchases & Virtual Currency</h2>
+                <p>The App offers:</p>
+                <div class="data-list">
+                    <ul>
+                        <li>Consumable virtual currency (gems)</li>
+                        <li>Non-consumable items (e.g., ad removal, UI skins)</li>
+                    </ul>
+                </div>
+                <p>All purchases are handled by Google Play Billing:</p>
+                <div class="data-list">
+                    <ul>
+                        <li>Prices are determined by the Google Play Store</li>
+                        <li>Purchases are non-refundable except where required by law or handled directly by Google</li>
+                        <li>Virtual currency has no real-world value and cannot be exchanged for money</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="section">
+                <h2>4. Advertisements</h2>
+                <p>The App may display:</p>
+                <div class="data-list">
+                    <ul>
+                        <li>Interstitial advertisements (between game modes)</li>
+                        <li>Rewarded advertisements (optional and user-initiated)</li>
+                    </ul>
+                </div>
+                <div class="info-box">
+                    <p>The developer is not responsible for the content of third-party advertisements.</p>
+                </div>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="section">
+                <h2>5. Acceptable Use</h2>
+                <p>You agree not to:</p>
+                <div class="data-list">
+                    <ul>
+                        <li>Cheat, exploit, or modify the App</li>
+                        <li>Use automation, bots, or unauthorized tools</li>
+                        <li>Attempt to reverse engineer or tamper with the App or its services</li>
+                        <li>Abuse in-game systems or virtual economy</li>
+                    </ul>
+                </div>
+                <div class="warning-box">
+                    <p>⚠️ Violation of these rules may result in suspension or termination of access.</p>
+                </div>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="section">
+                <h2>6. Data & Analytics</h2>
+                <p>The App collects limited analytics data to improve gameplay and stability.</p>
+                <p>Users may disable analytics collection at any time through the app settings (Settings > Other).</p>
+                <p>For more information, please refer to the <a href="privacy-policy-en.html">Privacy Policy</a>.</p>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="section">
+                <h2>7. Availability & Changes</h2>
+                <p>The App is provided "as is" and "as available".</p>
+                <p>The developer:</p>
+                <div class="data-list">
+                    <ul>
+                        <li>Does not guarantee uninterrupted service</li>
+                        <li>May modify or discontinue features at any time</li>
+                        <li>May rebalance gameplay, virtual currency, or content without compensation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="section">
+                <h2>8. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by law:</p>
+                <div class="data-list">
+                    <ul>
+                        <li>The developer shall not be liable for indirect or incidental damages</li>
+                        <li>The developer is not responsible for data loss, bugs, crashes, or compatibility issues</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="section">
+                <h2>9. Termination</h2>
+                <p>You may stop using the App at any time.</p>
+                <p>The developer may suspend or terminate access in case of:</p>
+                <div class="data-list">
+                    <ul>
+                        <li>Abuse of the service</li>
+                        <li>Violation of these Terms</li>
+                        <li>Technical or legal reasons</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="section">
+                <h2>10. Governing Law</h2>
+                <p>These Terms are governed by the laws of <strong>France</strong>.</p>
+            </div>
+
+            <!-- Section 11 -->
+            <div class="section">
+                <h2>11. Contact</h2>
+                <div class="contact">
+                    <p>For questions regarding these Terms, contact:</p>
+                    <a href="mailto:Genso.dev@gmail.com">Genso.dev@gmail</a>
+                    <div class="contact-info">
+                        <p><strong>Developer:</strong> Sedigi Tamime</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-links">
+                <a href="index.html">Privacy Policy (EN)</a>
+                <a href="data-deletion-en.html">Delete Account and Data (EN)</a>
+                <a href="legal-notices.html">Mentions Légales (FR)</a>
+            </div>
+            <div class="footer-info">
+                <p>PocketGamesLab – Indie Mobile Game Collection</p>
+                <p>Last Updated: December 20, 2025</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

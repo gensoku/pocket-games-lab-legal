@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Account and Data – Pocket Games Lab</title>
+    <title>Mentions Légales – PocketGamesLab</title>
     <style>
         * {
             margin: 0;
@@ -20,7 +20,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             background: white;
             border-radius: 12px;
@@ -29,7 +29,7 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
             color: white;
             padding: 40px 30px;
             text-align: center;
@@ -51,8 +51,8 @@
         }
 
         .intro {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
+            background: #ecf0f1;
+            border-left: 4px solid #34495e;
             padding: 20px;
             margin-bottom: 30px;
             border-radius: 4px;
@@ -60,58 +60,45 @@
 
         .intro p {
             margin: 0;
-            font-size: 1.05em;
-            color: #856404;
+            color: #2c3e50;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #dee2e6;
         }
 
         h2 {
-            color: #e74c3c;
+            color: #34495e;
             font-size: 1.6em;
-            margin: 30px 0 20px 0;
+            margin: 40px 0 20px 0;
             padding-bottom: 10px;
             border-bottom: 2px solid #f5f7fa;
         }
 
-        .steps {
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .info-block {
             background: #f8f9fa;
-            border-radius: 8px;
-            padding: 25px;
+            border-left: 4px solid #34495e;
+            padding: 20px;
             margin: 20px 0;
+            border-radius: 4px;
         }
 
-        .step {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 15px;
-            padding: 12px;
-            background: white;
-            border-radius: 6px;
-            transition: transform 0.2s ease;
+        .info-block p {
+            margin: 8px 0;
+            color: #2c3e50;
         }
 
-        .step:hover {
-            transform: translateX(5px);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .step-number {
-            background: #e74c3c;
-            color: white;
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.1em;
-            flex-shrink: 0;
-            margin-right: 15px;
-        }
-
-        .step-text {
-            padding-top: 4px;
-            font-size: 1.05em;
+        .info-block strong {
+            color: #34495e;
         }
 
         .data-list {
@@ -127,56 +114,45 @@
             padding: 12px 15px;
             margin: 8px 0;
             background: #f8f9fa;
-            border-left: 4px solid #e74c3c;
+            border-left: 4px solid #34495e;
             border-radius: 4px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .data-list li::before {
-            content: "✓";
-            color: #e74c3c;
+            content: "•";
+            color: #34495e;
             font-weight: 700;
-            font-size: 1.3em;
+            font-size: 1.5em;
             margin-right: 12px;
+            line-height: 1.2;
         }
 
-        .retention-section {
-            background: #e8f5e9;
-            border-left: 4px solid #4caf50;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 4px;
+        p {
+            margin: 12px 0;
+            line-height: 1.7;
         }
 
-        .retention-section li {
-            border-left-color: #4caf50;
-        }
-
-        .retention-section li::before {
-            color: #4caf50;
-        }
-
-        .warning-box {
-            background: #ffebee;
-            border: 2px solid #e74c3c;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 25px 0;
-            text-align: center;
-        }
-
-        .warning-box p {
-            margin: 0;
+        strong {
+            color: #2c3e50;
             font-weight: 600;
-            color: #c0392b;
-            font-size: 1.1em;
+        }
+
+        a {
+            color: #34495e;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         .contact {
             background: #e3f2fd;
             border-left: 4px solid #2196f3;
-            padding: 20px;
+            padding: 25px;
             margin: 30px 0 0 0;
             border-radius: 4px;
             text-align: center;
@@ -186,6 +162,7 @@
             margin: 0 0 12px 0;
             color: #1565c0;
             font-weight: 600;
+            font-size: 1.1em;
         }
 
         .contact a {
@@ -215,14 +192,14 @@
         }
 
         .footer-links a {
-            color: #e74c3c;
+            color: #34495e;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s;
         }
 
         .footer-links a:hover {
-            color: #c0392b;
+            color: #2c3e50;
             text-decoration: underline;
         }
 
@@ -249,13 +226,8 @@
                 padding: 25px 20px;
             }
 
-            .step {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .step-number {
-                margin-bottom: 10px;
+            h2 {
+                font-size: 1.4em;
             }
 
             .footer-links {
@@ -268,90 +240,133 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🗑️ Delete Account and Data</h1>
-            <p>Pocket Games Lab</p>
+            <h1>⚖️ Mentions Légales</h1>
+            <p>PocketGamesLab</p>
         </div>
 
         <div class="content">
+            <div class="last-updated">
+                Dernière mise à jour : 20 décembre 2025
+            </div>
+
             <div class="intro">
-                <p>Users can request deletion of their account and associated data directly from within the app.</p>
+                <p>Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs de l'application PocketGamesLab l'identité des différents intervenants.</p>
             </div>
 
-            <h2>How to delete your account</h2>
-            
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-text">Open the app</div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-text">Go to Profile</div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-text">Open the Account section</div>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-text">Tap Delete account</div>
-                </div>
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <div class="step-text">Confirm the deletion</div>
+            <!-- Section 1 -->
+            <div class="section">
+                <h2>1. Éditeur de l'application</h2>
+                <div class="info-block">
+                    <p><strong>Nom de l'application :</strong> PocketGamesLab</p>
+                    <p><strong>Éditeur / Développeur :</strong> Sedigi Tamime</p>
+                    <p><strong>Statut :</strong> Auto-Entrepreneur</p>
+                    <p><strong>SIRET :</strong>842 913 931 00015</p>
+                    <p><strong>Siège social :</strong>42 rue liancourt</p>
+                    <p><strong>Email de contact :</strong> <a href="mailto:Genso.dev@gmail.com">Genso.dev@gmail.com</a></p>
+                    <p><strong>Pays :</strong> France</p>
                 </div>
             </div>
 
-            <div class="warning-box">
-                <p>⚠️ The account and associated data will be deleted immediately.</p>
+            <!-- Section 3 -->
+            <div class="section">
+                <h2>3. Hébergement des données</h2>
+                <p>Les données de l'application sont hébergées par :</p>
+                <div class="info-block">
+                    <p><strong>Google Firebase</strong></p>
+                    <p>Google LLC<br>
+                    1600 Amphitheatre Parkway<br>
+                    Mountain View, CA 94043<br>
+                    États-Unis</p>
+                    <p><strong>Site web :</strong> <a href="https://firebase.google.com" target="_blank">firebase.google.com</a></p>
+                </div>
             </div>
 
-            <h2>Data that is deleted</h2>
-            
-            <div class="data-list">
-                <p style="margin-bottom: 15px;">When you delete your account, the following data is permanently removed:</p>
-                <ul>
-                    <li>User account (Firebase Authentication UID)</li>
-                    <li>Email address (if linked)</li>
-                    <li>Gameplay progress and statistics</li>
-                    <li>Achievements and unlocks</li>
-                    <li>Virtual currency balance (gems)</li>
-                    <li>Custom profile data (avatar, name, customization)</li>
-                </ul>
+            <!-- Section 4 -->
+            <div class="section">
+                <h2>4. Distribution</h2>
+                <p>L'application est distribuée via :</p>
+                <div class="info-block">
+                    <p><strong>Google Play Store</strong></p>
+                    <p>Google LLC<br>
+                    1600 Amphitheatre Parkway<br>
+                    Mountain View, CA 94043<br>
+                    États-Unis</p>
+                </div>
             </div>
 
-            <h2>Data that may be retained</h2>
-            
-            <div class="retention-section">
-                <ul>
-                    <li>Purchase history required for legal or financial compliance (handled by Google Play)</li>
-                    <li>Anonymous aggregated analytics data (non-identifiable)</li>
-                </ul>
+            <!-- Section 5 -->
+            <div class="section">
+                <h2>5. Propriété intellectuelle</h2>
+                <p>L'ensemble des contenus de l'application (code source, graphismes, sons, textes, interfaces, logos) est la propriété exclusive de l'éditeur et est protégé par le droit d'auteur français et international.</p>
+                <p>Toute reproduction, représentation, modification, publication, adaptation totale ou partielle des éléments de l'application, quel que soit le moyen ou le procédé utilisé, est interdite sans l'autorisation écrite préalable de l'éditeur.</p>
+                <p>Toute exploitation non autorisée de l'application ou de l'un des éléments qu'elle contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
             </div>
 
-            <h2>Retention period</h2>
-            
-            <div class="data-list">
-                <ul>
-                    <li><strong>Account-related data:</strong> deleted immediately</li>
-                    <li><strong>Financial records:</strong> retained according to Google Play's policies</li>
-                </ul>
+            <!-- Section 6 -->
+            <div class="section">
+                <h2>6. Données personnelles</h2>
+                <p>L'application collecte et traite des données personnelles conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.</p>
+                <p>Pour plus d'informations sur la collecte et le traitement de vos données personnelles, veuillez consulter notre <a href="privacy-policy-en.html">Politique de Confidentialité</a>.</p>
+                <p>Conformément à la loi "Informatique et Libertés" et au RGPD, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données vous concernant. Pour exercer ces droits, contactez : <a href="mailto:[Email de contact]">[Email de contact]</a></p>
             </div>
 
-            <div class="contact">
-                <p>For any issue, contact:</p>
-                <a href="mailto:genso.dev@gmail.com">genso.dev@gmail.com</a>
+            <!-- Section 7 -->
+            <div class="section">
+                <h2>7. Cookies et traceurs</h2>
+                <p>L'application utilise Firebase Analytics pour collecter des données anonymes d'utilisation.</p>
+                <p>Vous pouvez désactiver la collecte de ces données à tout moment dans les paramètres de l'application (Réglages > Autre).</p>
+                <p>Aucun cookie n'est utilisé directement par l'application. Les services tiers (Firebase, publicités) peuvent utiliser leurs propres mécanismes de suivi conformément à leurs politiques respectives.</p>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="section">
+                <h2>8. Limitation de responsabilité</h2>
+                <p>L'éditeur ne peut être tenu responsable :</p>
+                <div class="data-list">
+                    <ul>
+                        <li>Des interruptions de service, maintenances ou pannes techniques</li>
+                        <li>Des pertes de données dues à une mauvaise utilisation de l'application</li>
+                        <li>Des dysfonctionnements liés à l'appareil, au système d'exploitation ou à la connexion Internet de l'utilisateur</li>
+                        <li>Des contenus publicitaires affichés par des tiers</li>
+                        <li>De l'utilisation frauduleuse de l'application par des utilisateurs</li>
+                    </ul>
+                </div>
+                <p>L'application est fournie "en l'état" sans garantie d'aucune sorte, expresse ou implicite.</p>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="section">
+                <h2>9. Modifications</h2>
+                <p>L'éditeur se réserve le droit de modifier les présentes mentions légales à tout moment. Les modifications prendront effet dès leur publication dans l'application ou sur cette page.</p>
+                <p>Il est conseillé de consulter régulièrement cette page pour prendre connaissance des éventuelles modifications.</p>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="section">
+                <h2>10. Droit applicable et juridiction</h2>
+                <p>Les présentes mentions légales sont régies par le droit français.</p>
+                <p>En cas de litige, et après tentative de recherche d'une solution amiable, compétence est attribuée aux tribunaux français.</p>
+            </div>
+
+            <!-- Section 11 -->
+            <div class="section">
+                <h2>11. Contact</h2>
+                <div class="contact">
+                    <p>Pour toute question concernant les mentions légales, contactez :</p>
+                    <a href="mailto:Genso.dev@gmail.com">Genso.dev@gmail.com</a>
+                </div>
             </div>
         </div>
 
         <div class="footer">
             <div class="footer-links">
-                <a href="index.html">Privacy Policy</a>
-                <a href="terms-of-service-en.html">Terms of Service</a>
+                <a href="index.html">Privacy Policy (EN)</a>
+                <a href="data-deletion.html">Data Deletion (EN)</a>
+                <a href="terms-of-service.html">Terms of Service (EN)</a>
             </div>
             <div class="footer-info">
-                <p>Pocket Games Lab – Indie Mobile Game Collection</p>
-                <p>Last Updated: December 2025</p>
+                <p>PocketGamesLab – Collection de Jeux Mobiles Indépendants</p>
+                <p>Dernière mise à jour : 20 décembre 2025</p>
             </div>
         </div>
     </div>
